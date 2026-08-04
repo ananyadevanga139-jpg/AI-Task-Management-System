@@ -4,7 +4,7 @@ dotenv.config();
 
 import express from "express";
 import cors from "cors";
-import "./config/db";
+import pool from "./config/db";
 
 import { createUserTable } from "./models/userModel";
 import { createTaskTable } from "./models/taskModel";
@@ -12,7 +12,6 @@ import { createTaskTable } from "./models/taskModel";
 import authRoutes from "./routes/authRoutes";
 import taskRoutes from "./routes/taskRoutes";
 import aiRoutes from "./routes/aiRoutes";
-import pool from "./config/db";
 
 
 const app = express();
@@ -21,13 +20,14 @@ const app = express();
 // CORS Configuration
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://ai-task-manager-ilha.vercel.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
-
-
 app.use(express.json());
 
 
