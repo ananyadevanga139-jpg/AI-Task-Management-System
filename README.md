@@ -1,130 +1,165 @@
-# 🚀 AI Task Management System
+# 🤖 AI Task Management System
 
-An AI-powered full-stack task management application that helps users create, organize, track, and optimize their daily tasks with intelligent productivity assistance.
+An AI-powered task management web application that helps users create, organize, and track tasks efficiently. The application provides secure authentication, task management features, and a responsive user interface with a full-stack architecture.
 
-This project provides secure authentication, task management, dashboard analytics, and AI-generated productivity suggestions using a modern full-stack architecture.
+## 🚀 Live Demo
+
+### Frontend
+🔗 https://ai-task-management-frontend-7iam.onrender.com
+
+### Backend API
+🔗 https://ai-task-management-system.onrender.com
 
 ---
 
-## ✨ Features
+## 📌 Features
 
-### 🔐 Authentication
-
-- User Registration
-- User Login
-- JWT Authentication
-- Protected Routes
-- Password Encryption using bcrypt
+### 🔐 User Authentication
+- User registration and login
+- Secure password encryption using bcrypt
+- JWT-based authentication
+- Protected routes
 
 ### ✅ Task Management
-
 - Create tasks
 - View tasks
-- Update tasks
+- Update task status
 - Delete tasks
-- Mark tasks as completed
-- Filter tasks by status
+- Track task progress
 
-### 📊 Dashboard
+### 🤖 AI Integration
+- AI-powered task assistance
+- Smart task management workflow
+- Intelligent productivity support
 
-- Total task count
-- Completed task count
-- Pending task count
-- Productivity overview
-
-### 🤖 AI Productivity Assistant
-
-- AI-generated task suggestions
-- Smart productivity recommendations
-- Workflow improvement suggestions
-
-### 🎨 User Interface
-
-- Responsive design
-- Modern dashboard UI
-- Interactive task cards
-- Loading states
-- Error handling
+### 🖥️ Responsive UI
+- Modern React interface
+- Mobile-friendly design
+- Clean dashboard experience
 
 ---
 
-# 🛠️ Tech Stack
+## 🏗️ System Architecture
 
-## Frontend
+```
+React Frontend
+      |
+      |
+REST API
+      |
+      |
+Node.js + Express Backend
+      |
+      |
+PostgreSQL Database (Supabase)
+```
 
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
 - React.js
 - TypeScript
-- Tailwind CSS
 - Vite
-- React Router
+- Tailwind CSS
+- JavaScript
+- HTML5
+- CSS3
 
-## Backend
-
+### Backend
 - Node.js
 - Express.js
 - TypeScript
-- JWT
+- JWT Authentication
+- bcrypt
 
-## Database
-
+### Database
 - PostgreSQL
+- Supabase
 
-## Tools
-
-- VS Code
-- Thunder Client
-- GitHub
+### Deployment
+- Render (Frontend)
+- Render (Backend)
+- Supabase PostgreSQL
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
-AI-Task-Management-System
+AI-Task-Management-System/
 
-├── frontend
-│   ├── src
-│   │   ├── pages
-│   │   │   ├── Login.tsx
-│   │   │   ├── Register.tsx
-│   │   │   ├── Dashboard.tsx
-│   │   │   └── Tasks.tsx
-│   │   │
-│   │   └── services
-│   │       └── api.ts
-│   │
-│   └── package.json
 │
-├── backend
-│   ├── src
-│   │   ├── controllers
-│   │   ├── routes
-│   │   ├── middleware
-│   │   ├── models
-│   │   └── server.ts
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── middleware/
+│   │   └── config/
 │   │
-│   └── package.json
+│   ├── package.json
+│   └── Dockerfile
 │
 └── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Installation & Setup
 
 ## Clone Repository
 
 ```bash
 git clone https://github.com/ananyadevanga139-jpg/AI-Task-Management-System.git
+```
 
+Move into project:
+
+```bash
 cd AI-Task-Management-System
+```
+
+---
+
+# Frontend Setup
+
+Navigate:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:5173
 ```
 
 ---
 
 # Backend Setup
 
-Go to backend folder:
+Navigate:
 
 ```bash
 cd backend
@@ -138,12 +173,14 @@ npm install
 
 Create `.env` file:
 
-```
+```env
 PORT=5000
 
-DATABASE_URL=your_postgresql_url
+DATABASE_URL=your_postgresql_database_url
 
 JWT_SECRET=your_secret_key
+
+NODE_ENV=development
 ```
 
 Run backend:
@@ -160,45 +197,17 @@ http://localhost:5000
 
 ---
 
-# Frontend Setup
-
-Open another terminal:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run frontend:
-
-```bash
-npm run dev
-```
-
-Frontend runs on:
-
-```
-http://localhost:5173
-```
-
----
-
-# 🔗 API Endpoints
+# 🔌 API Endpoints
 
 ## Authentication
 
-### Register
+### Register User
 
 ```
 POST /api/auth/register
 ```
 
-### Login
+### Login User
 
 ```
 POST /api/auth/login
@@ -234,104 +243,51 @@ DELETE /api/tasks/:id
 
 ---
 
-## AI Assistant
+# 🌐 Deployment
 
-```
-GET /api/ai/suggestions
-```
-
----
-
-# 🚀 Deployment
+The application is deployed using Render.
 
 ## Frontend Deployment
 
-Platform:
-
-**Vercel**
-
-Steps:
-
-1. Connect GitHub repository to Vercel.
-2. Select `frontend` as root directory.
-3. Build command:
-
 ```
-npm run build
+https://ai-task-management-frontend-7iam.onrender.com
 ```
-
-4. Output directory:
-
-```
-dist
-```
-
-Frontend URL:
-
-```
-https://your-frontend-url.vercel.app
-```
-
----
 
 ## Backend Deployment
 
-Platform:
-
-**Render**
-
-Steps:
-
-1. Connect GitHub repository.
-2. Create Web Service.
-3. Select `backend` folder.
-
-Build Command:
-
 ```
-npm install
+https://ai-task-management-system.onrender.com
 ```
 
-Start Command:
+Database hosted using:
 
 ```
-npm run start
-```
-
-Environment Variables:
-
-```
-PORT
-DATABASE_URL
-JWT_SECRET
-```
-
-Backend URL:
-
-```
-https://your-backend-url.onrender.com
+Supabase PostgreSQL
 ```
 
 ---
 
-# 🔒 Security Features
+# 📸 Screenshots
 
-- JWT authentication
-- Password hashing
-- Protected APIs
-- Input validation
-- User-specific data access
+(Add your application screenshots here)
+
+Example:
+
+- Login Page
+- Register Page
+- Dashboard
+- Task Management Screen
 
 ---
 
-# 🔮 Future Enhancements
+# 🎯 Learning Outcomes
 
-- Real-time task updates
-- Email reminders
-- Calendar integration
-- AI task prioritization
-- Team collaboration
-- Mobile application
+- Developed a complete full-stack application
+- Implemented authentication and authorization
+- Built REST APIs using Express.js
+- Integrated PostgreSQL database
+- Connected frontend and backend services
+- Deployed production-ready application
 
 ---
 
@@ -339,17 +295,7 @@ https://your-backend-url.onrender.com
 
 **Ananya K**
 
-Information Science Engineering Student
 
 ---
 
-# ⭐ Project Highlights
-
-This project demonstrates:
-
-- Full-stack development
-- REST API development
-- PostgreSQL integration
-- Authentication systems
-- AI-powered productivity features
-- Cloud deployment workflow
+⭐ If you like this project, consider giving it a star!
