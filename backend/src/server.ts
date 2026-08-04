@@ -1,10 +1,8 @@
 import dotenv from "dotenv";
-
 dotenv.config();
 
 import express from "express";
 import cors from "cors";
-import pool from "./config/db";
 
 import { createUserTable } from "./models/userModel";
 import { createTaskTable } from "./models/taskModel";
@@ -13,20 +11,23 @@ import authRoutes from "./routes/authRoutes";
 import taskRoutes from "./routes/taskRoutes";
 import aiRoutes from "./routes/aiRoutes";
 
-
 const app = express();
 
 
 // CORS Configuration
 app.use(
   cors({
-    origin: [
-      "https://ai-task-management-frontend-7iam.onrender.com",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: "https://ai-task-management-frontend-7iam.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
+app.options("*", cors());
+
+
+// Body parser
 app.use(express.json());
 
 
@@ -35,7 +36,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/ai", aiRoutes);
 
-// Create Database Tables
+
+// Database initialization
 const startDatabase = async () => {
   try {
     await createUserTable();
@@ -51,48 +53,17 @@ const startDatabase = async () => {
 startDatabase();
 
 
+// Root route
+app.get("/", (req, res) => {
+  res.json({
+    message: "AI Task Management Backend Running",
+  });
+});
+
+
+// Server
 const PORT = process.env.PORT || 5000;
 
-
-// Test API
-app.get("/", (req, res) => {
-  res.send("AI Task Management Backend Running");
-});
-
-
-// Test Database Connection
-app.get("/api/test-db", async (req, res) => {
-
-  try {
-
-    const result = await pool.query(
-      "SELECT NOW()"
-    );
-
-    res.json({
-      message: "Database Connected Successfully",
-      time: result.rows[0]
-    });
-
-
-  } catch (error) {
-
-    console.log(error);
-
-    res.status(500).json({
-      message: "Database Connection Failed"
-    });
-
-  }
-
-});
-
-
-// Start Server
 app.listen(PORT, () => {
-
-  console.log(
-    `Server running on port ${PORT}`
-  );
-
+  console.log(`Server running on port ${PORT}`);
 });
