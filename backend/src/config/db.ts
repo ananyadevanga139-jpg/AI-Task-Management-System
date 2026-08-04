@@ -14,4 +14,8 @@ pool.on("connect", () => {
   console.log("PostgreSQL Connected Successfully");
 });
 
+pool.on("error", (err) => {
+  console.log("Database Error:", err);
+});
+
 export default pool;
