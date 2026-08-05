@@ -1,301 +1,233 @@
 # 🤖 AI Task Management System
 
-An AI-powered task management web application that helps users create, organize, and track tasks efficiently. The application provides secure authentication, task management features, and a responsive user interface with a full-stack architecture.
+<p align="center">
 
-## 🚀 Live Demo
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=AI+Powered+Task+Management+System;Full+Stack+Web+Application;React+%7C+Node.js+%7C+PostgreSQL"/>
 
-### Frontend
-🔗 https://ai-task-management-frontend-7iam.onrender.com
+</p>
 
-### Backend API
-🔗 https://ai-task-management-system.onrender.com
 
----
+<p align="center">
 
-## 📌 Features
+A modern full-stack AI-powered task management application that helps users create, organize, manage, and track tasks efficiently with secure authentication and intelligent workflow management.
 
-### 🔐 User Authentication
-- User registration and login
-- Secure password encryption using bcrypt
-- JWT-based authentication
-- Protected routes
+</p>
 
-### ✅ Task Management
-- Create tasks
-- View tasks
-- Update task status
-- Delete tasks
-- Track task progress
-
-### 🤖 AI Integration
-- AI-powered task assistance
-- Smart task management workflow
-- Intelligent productivity support
-
-### 🖥️ Responsive UI
-- Modern React interface
-- Mobile-friendly design
-- Clean dashboard experience
 
 ---
 
-## 🏗️ System Architecture
+# 🌐 Live Demo
 
-```
-React Frontend
-      |
-      |
-REST API
-      |
-      |
-Node.js + Express Backend
-      |
-      |
-PostgreSQL Database (Supabase)
-```
+🚀 Frontend:
+
+https://ai-task-management-frontend-7iam.onrender.com/
+
 
 ---
 
-## 🛠️ Technologies Used
+# ✨ Features
 
-### Frontend
+✅ User Authentication & Authorization  
+✅ Secure JWT-based login system  
+✅ User registration and login  
+✅ Create, update, delete tasks  
+✅ Task status management  
+✅ Task tracking dashboard  
+✅ Responsive modern UI  
+✅ REST API integration  
+✅ PostgreSQL database integration  
+✅ Protected routes  
+✅ AI-powered workflow management  
+
+
+---
+
+# 🛠️ Tech Stack
+
+
+## 🎨 Frontend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=react,typescript,tailwind,vite"/>
+
+</p>
+
+
+Technologies:
+
 - React.js
 - TypeScript
-- Vite
 - Tailwind CSS
-- JavaScript
-- HTML5
-- CSS3
+- Vite
+- React Router
+- Axios
 
-### Backend
+
+---
+
+## ⚙️ Backend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,typescript"/>
+
+</p>
+
+
+Technologies:
+
 - Node.js
 - Express.js
 - TypeScript
 - JWT Authentication
-- bcrypt
+- REST APIs
 
-### Database
-- PostgreSQL
-- Supabase
-
-### Deployment
-- Render (Frontend)
-- Render (Backend)
-- Supabase PostgreSQL
 
 ---
 
-## 📂 Project Structure
+## 🗄️ Database & Tools
 
-```
-AI-Task-Management-System/
+<p>
+
+<img src="https://skillicons.dev/icons?i=postgres,git,github"/>
+
+</p>
+
+
+Technologies:
+
+- PostgreSQL
+- Git
+- GitHub
+- Postman
+
+
+---
+
+# 🏗️ Project Architecture
+
+
+
+AI-Task-Management-System
 
 │
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.ts
+├── frontend
 │
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   └── config/
-│   │
-│   ├── package.json
-│   └── Dockerfile
+│ ├── React.js
+│ ├── TypeScript
+│ ├── Tailwind CSS
+│ └── Vite
+│
+│
+├── backend
+│
+│ ├── Node.js
+│ ├── Express.js
+│ ├── TypeScript
+│ └── PostgreSQL
+│
 │
 └── README.md
-```
+
+
 
 ---
 
-# ⚙️ Installation & Setup
+# 🚀 Installation & Setup
 
-## Clone Repository
+
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/ananyadevanga139-jpg/AI-Task-Management-System.git
-```
-
-Move into project:
-
-```bash
-cd AI-Task-Management-System
-```
-
----
-
-# Frontend Setup
-
-Navigate:
-
-```bash
+Frontend Setup
 cd frontend
-```
 
-Install dependencies:
-
-```bash
 npm install
-```
 
-Run development server:
-
-```bash
 npm run dev
-```
 
 Frontend runs on:
 
-```
 http://localhost:5173
-```
-
----
-
-# Backend Setup
-
-Navigate:
-
-```bash
+Backend Setup
 cd backend
-```
 
-Install dependencies:
-
-```bash
 npm install
-```
 
-Create `.env` file:
+npm run dev
 
-```env
+Backend runs on:
+
+http://localhost:5000
+🔐 Environment Variables
+
+Create .env file inside backend:
+
 PORT=5000
 
 DATABASE_URL=your_postgresql_database_url
 
 JWT_SECRET=your_secret_key
-
-NODE_ENV=development
-```
-
-Run backend:
-
-```bash
-npm run dev
-```
-
-Backend runs on:
-
-```
-http://localhost:5000
-```
-
----
-
-# 🔌 API Endpoints
-
-## Authentication
-
-### Register User
-
-```
-POST /api/auth/register
-```
-
-### Login User
-
-```
-POST /api/auth/login
-```
-
----
-
-## Tasks
-
-### Get Tasks
-
-```
-GET /api/tasks
-```
-
-### Create Task
-
-```
-POST /api/tasks
-```
-
-### Update Task
-
-```
-PUT /api/tasks/:id
-```
-
-### Delete Task
-
-```
-DELETE /api/tasks/:id
-```
-
----
-
-# 🌐 Deployment
-
-The application is deployed using Render.
-
-## Frontend Deployment
-
-```
-https://ai-task-management-frontend-7iam.onrender.com
-```
-
-## Backend Deployment
-
-```
-https://ai-task-management-system.onrender.com
-```
-
-Database hosted using:
-
-```
-Supabase PostgreSQL
-```
-
----
-
-# 📸 Screenshots
-
-(Add your application screenshots here)
-
-Example:
-
-- Login Page
-- Register Page
-- Dashboard
-- Task Management Screen
-
----
-
-# 🎯 Learning Outcomes
-
-- Developed a complete full-stack application
-- Implemented authentication and authorization
-- Built REST APIs using Express.js
-- Integrated PostgreSQL database
-- Connected frontend and backend services
-- Deployed production-ready application
-
----
-
-# 👩‍💻 Author
-
-**Ananya K**
+📂 Folder Structure
+frontend
+│
+├── src
+│   ├── components
+│   ├── pages
+│   ├── services
+│   └── App.tsx
+│
 
 
----
+backend
+│
+├── src
+│   ├── controllers
+│   ├── routes
+│   ├── middleware
+│   ├── models
+│   └── server.ts
+📸 Application Screenshots
 
-⭐ If you like this project, consider giving it a star!
+Add screenshots here:
+
+screenshots/
+
+├── login.png
+├── register.png
+├── dashboard.png
+└── tasks.png
+
+🎯 Future Enhancements
+
+🚀 AI task priority prediction
+🚀 Smart task recommendations
+🚀 Real-time collaboration
+🚀 Notifications system
+🚀 Mobile application
+🚀 Advanced analytics dashboard
+
+👩‍💻 Author
+Ananya K
+
+Full Stack & AI Developer
+
+Connect With Me
+
+GitHub:
+
+https://github.com/ananyadevanga139-jpg
+
+LinkedIn:
+
+https://www.linkedin.com/in/ananya-k-741310325/
+
+Portfolio:
+
+https://personal-portfolio-website-r80y3p6a0-ananya-3073.vercel.app
+
+⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
